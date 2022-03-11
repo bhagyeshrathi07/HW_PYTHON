@@ -11,5 +11,6 @@ def calculate_time(func1):
 @calculate_time
 def printE():
     print("hey")
+    
 printE()
 

@@ -3,7 +3,6 @@ def sort_list(num_list):
     i = 0
     try:
         while (i < n):
-            if (type(num_list[i]) == int):
                 j = 0
                 while (j < n - i - 1) :
                     if (num_list[j] > num_list[j+1]):

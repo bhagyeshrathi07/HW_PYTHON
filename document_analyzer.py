@@ -1,13 +1,13 @@
-file1 = open('document.txt', encoding='utf8')
+file = open('document.txt', encoding='utf8')
 
-sentence_list = file1.read()
+sentence_list = file.read()
 
 rm_period = sentence_list.replace(".","")
 
-sentence_list = rm_period.split()
+sent_list = rm_period.split()
 
 unique_words = []
-for word in sentence_list:
+for word in sent_list:
     if word not in unique_words:
         unique_words.append(word)
 
@@ -15,16 +15,17 @@ unique_words.sort()
 
 value = []
 for i in range(len(unique_words)):
-    value.append(sentence_list.count(unique_words[i]))
+    value.append(sent_list.count(unique_words[i]))
 
-dictionary_sen = {}
+elements = {}
 
 for i in range(len(unique_words)):
-    dictionary_sen [unique_words[i]] = value[i]
+    elements [unique_words[i]] = value[i]
 
 
-dictionary_sorted = sorted(dictionary_sen , key=dictionary_sen.get, reverse=True)[:5]
+dictionary_sorted = sorted(elements , key = elements.get, reverse = True)[:5]
 
+print("\r")
 for i in range(len(dictionary_sorted)):
 
-    print(str(dictionary_sorted[i]) + ": " + str(dictionary_sen[dictionary_sorted[i]]))
+    print(str(dictionary_sorted[i]) + ": " + str(elements[dictionary_sorted[i]]))
