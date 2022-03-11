@@ -15,5 +15,10 @@ def sort_list(num_list):
     except:
         print("Invalid Input")
 
-l1 = [2, 8, 4, 3, 9, 57, 1, 0, 23, 36, 82]
-print(sort_list(l1))
+def print_list(list1):
+    for i in range(len(list1)):
+        print(list1[i])
+
+l1 = ['a', 'c','r', 'b']
+
+print_list(sort_list(l1))
